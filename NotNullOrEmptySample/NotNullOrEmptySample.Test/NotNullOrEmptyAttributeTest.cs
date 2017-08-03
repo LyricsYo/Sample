@@ -20,15 +20,15 @@ namespace NotNullOrEmptySample.Test
         [Fact]
         public void StringTest()
         {
-            Assert.Throws<AggregateException>(() => _appService.ValidateNotNullOrEmpty<string>(null));
-            Assert.Throws<AggregateException>(() => _appService.ValidateNotNullOrEmpty(string.Empty));
+            Assert.Throws<ArgumentNullException>(() => _appService.ValidateNotNullOrEmpty<string>(null));
+            Assert.Throws<ArgumentNullException>(() => _appService.ValidateNotNullOrEmpty(string.Empty));
             _appService.ValidateNotNullOrEmpty("str");
         }
 
         [Fact]
         public void ObjectTest()
         {
-            Assert.Throws<AggregateException>(() => _appService.ValidateNotNullOrEmpty<object>(null));
+            Assert.Throws<ArgumentNullException>(() => _appService.ValidateNotNullOrEmpty<object>(null));
             _appService.ValidateNotNullOrEmpty(new object());
         }
 
@@ -36,7 +36,7 @@ namespace NotNullOrEmptySample.Test
         public void NullableStructTest()
         {
             int? i = null;
-            Assert.Throws<AggregateException>(() => _appService.ValidateNotNullOrEmpty(i));
+            Assert.Throws<ArgumentNullException>(() => _appService.ValidateNotNullOrEmpty(i));
             i = 0;
             _appService.ValidateNotNullOrEmpty(i);
         }

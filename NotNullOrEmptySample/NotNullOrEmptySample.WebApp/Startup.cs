@@ -33,12 +33,12 @@ namespace NotNullOrEmptySample.WebApp
             // Add framework services.
             services.AddMvc();
 
+
             services.AddAspectCore(options =>
             {
                 options.AddParameterIntercept();
             });
             services.AddTransient<IAppService, AppService>();
-
             return services.BuildAspectCoreServiceProvider();
         }
 

@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AspectCore.Extensions.CrossParameters" Version="0.1.2" />
-    <PackageReference Include="AspectCore.Extensions.DependencyInjection" Version="0.1.2" />
+    <PackageReference Include="AspectCore.Extensions.CrossParameters" Version="0.2.0-preview1" />
+    <PackageReference Include="AspectCore.Extensions.DependencyInjection" Version="0.2.0-preview1" />
   </ItemGroup>
 
 </Project>

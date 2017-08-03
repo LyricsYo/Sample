@@ -8,7 +8,7 @@ using NotNullOrEmptySample.Services;
 namespace NotNullOrEmptySample.WebApp.Controllers
 {
     [Route("api/[controller]")]
-    public class DemoController : Controller
+    public class ValuesController : Controller
     {
 
         // GET api/values
